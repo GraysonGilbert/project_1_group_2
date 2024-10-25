@@ -8,12 +8,11 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(robot_state_publisher REQUIRED)
-find_package(rclpy REQUIRED)
-find_package(geometry_msgs REQUIRED)
-find_package(std_msgs REQUIRED)
 find_package(xacro REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(ros2_control REQUIRED)
+
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -24,25 +23,22 @@ urdf
 meshes
 launch
 worlds
-scripts
+config
 DESTINATION share/${PROJECT_NAME}/
 )
 
+# install(
+#     DIRECTORY include/project_1_group_2
+#     DESTINATION include
+#     )
 
-
-install(
-   DIRECTORY include/project_1_group_2/ 
-   DESTINATION include
-    )
-    
 install(
   PROGRAMS
   launch/robot_description_publisher.py
-  scripts/proportional_controller.py
+  launch/display.launch.py
+  scripts/teleop.py
   DESTINATION lib/${PROJECT_NAME}
-)
-
-
+  )
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
