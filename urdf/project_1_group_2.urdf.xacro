@@ -479,7 +479,7 @@
     <child
       link="drive_wheel_1" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
   </joint>
   <link
     name="drive_tire_1">
@@ -585,7 +585,7 @@
     <child
       link="drive_wheel_2" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
   </joint>
   <link
     name="drive_tire_2">
