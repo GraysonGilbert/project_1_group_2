@@ -2,6 +2,8 @@
 
 This README provides instructions for executing the package, along with commands for teleoperation and running a proportional controller. This package allows users to control a custom robot model in Gazebo using ROS 2 Galactic, either through manual teleoperation or an automated proportional controller.
 
+For a detailed explanantion of the project results, please refer to Project_1_Report-Group_2.pdf
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
